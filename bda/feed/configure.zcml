@@ -1,0 +1,35 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+		   xmlns:cmf="http://namespaces.zope.org/cmf"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           i18n_domain="bda.feed" >
+           
+    <include package="cornerstone.feed.zope" />
+    <include package="bda.contentproxy" />
+           
+	<genericsetup:registerProfile
+	  name="default"
+	  title="bda.feed"
+	  directory="profile"
+	  description="Extension profile for bda.feed"
+	  provides="Products.GenericSetup.interfaces.EXTENSION"
+	/>       
+	
+	<cmf:registerDirectory
+	  name="bda.feed"
+	  directory="skin"
+	/>	    
+	
+	<adapter factory=".taghandler.SubjectTagHandler" />
+	<adapter factory=".logohandler.BasePropsLogoHandler" />
+	
+	<adapter factory=".generic.FeedWithSingleSource"
+	         for="Products.ATContentTypes.interface.IATTopic"
+	         provides="cornerstone.feed.core.interfaces.IFeed"/>
+	         
+	<adapter factory=".collection.CollectionFeedEntryFactory" />
+
+	<adapter factory=".atfeedentries.ATPrimaryFieldEnclosure" />
+	<adapter factory=".atfeedentries.ATBodyFeedEntry" />
+	<adapter factory=".atfeedentries.ATDocumentFeedEntry" />
+</configure>

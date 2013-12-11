@@ -1,0 +1,7 @@
+<metadata>
+  <description>Plone generic feed support and feeds for collections.</description>
+  <version>2</version>
+  <dependencies>
+    <dependency>profile-bda.contentproxy:default</dependency>
+  </dependencies>  
+</metadata>
