@@ -7,7 +7,7 @@ mdfile = os.path.join(os.path.dirname(__file__), 'bda', 'feed', 'profile',
 metadata = parse(mdfile)
 assert metadata.documentElement.tagName == "metadata"
 shortdesc = metadata.getElementsByTagName("description")[0].childNodes[0].data
-readme = open(os.path.join(os.path.dirname(__file__), 'README.txt')).read()
+readme = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(name='bda.feed',
       version='2.0b2',
