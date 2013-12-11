@@ -11,11 +11,6 @@ possible to handle them via `bda.contentproxy
 
 Supported feed formats are: atom, rss, rdf (2.0 and 1.1) and itunes. ??
 
-Usage
-=====
-
-XXX TODO
-
 Also, if you think you need some of the parameters hooked in by components,
 just contact the author at `<dev@bluedynamics.com>` and ask for the feature.
 
@@ -41,4 +36,4 @@ Credits
 Licence
 =======
 
-- GNU General Public Licence 2.0 or later
+- GNU General Public Licence 2.0 
